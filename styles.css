@@ -1,0 +1,205 @@
+*{
+    font-family: 'Netflix Sans';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Netflix Sans', Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#titulo-text{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#titulo-text1{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fafefd6d;
+}
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 398.317px;
+    background-color: rgba(0, 0, 0, 0.5); /* negro con 50% transparencia */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+
+    display: flex;
+    justify-content: center; /* centrado horizontal */
+    align-items: center; 
+}
+
+.img-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+
+.ejemplo{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.titulo{
+    width: 40%;
+    height: auto;
+}
+
+.numero {
+    display: flex;       
+    align-items: center;    
+    gap: 15px;              
+    padding-left: 5vw;
+    margin-bottom: 40px;
+}
+
+
+.netflix-household {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #311817, #26171c);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.netflix-container {
+    width: 50%;
+    max-width: 630px;
+    padding: 20px;
+}
+
+.email-section{
+    text-align: left;
+}
+
+.error-modal {
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+    color: #FAFEFD;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #FAFEFD;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight:500;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: 0;
+}
+
+strong{
+    color: transparent;
+}
+
+.option-section{
+    text-align: left;
+}
+
+.red{
+    color: #E50914;
+}
+
+.parrafo-1{
+    width: 60%;
+}
+
+.subtitulo-1{
+    width: 19%;
+}
+
+.linea-vertical{
+    width: 8px;
+    height: 80%;
+    background-color: #fafefd6d;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+
+.create-account-btn {
+    background-color: #FAFEFD;
+    color: #2B171A;
+    width: 29%;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.watch-btn {
+    background-color: #55555596;
+    color: white;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.signout-btn {
+    background-color: transparent;
+    color: #e50914;
+    border: 1px solid #e50914;
+}
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
