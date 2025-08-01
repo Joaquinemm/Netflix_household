@@ -9,7 +9,7 @@
     <title>Netflix</title>
 </head>
 <body>
-    <div style="text-align: center; margin-bottom: 30vh; margin-top: 200%;">
+    <div class="header-section">
         <img class="titulo" src="images/titulo_netflix_household1.png" alt="">
         <p id="titulo-text">Elusión de restricciones mediante manipulación del DOM</p>
         <p id="titulo-text1">Estudio de Caso</p>
@@ -19,7 +19,7 @@
         <div class="subtitulo-1">
             <h2>Descripción de la situación objeto estudio</h2>
         </div>
-        <div class="linea-vertical"></div>
+        <div class="linea-vertical" style="height: 120px;"></div>
         <div class="parrafo-1">
             <p>El presente estudio analiza una vulnerabilidad de seguridad crítica identificada en el sistema de <strong class="red">Netflix</strong>  Household, que permite a los usuarios eludir las restricciones de acceso mediante la manipulación del DOM (Document Object Model). Esta situación representa un fallo significativo en el diseño de seguridad de la plataforma, con implicaciones tanto técnicas como comerciales.</p>
         </div>
@@ -29,7 +29,7 @@
         <div class="subtitulo-1">
             <h2>¿Donde se encuentra la vulnerabilidad?</h2>
         </div>
-        <div class="linea-vertical"></div>
+        <div class="linea-vertical" style="height: 120px;"></div>
         <div class="parrafo-1">
             <p>La vulnerabilidad se manifiesta específicamente en la versión web de <strong class="red">Netflix</strong>, accesible a través de navegadores como Chrome, Firefox y Edge. El problema surge cuando la plataforma intenta restringir el acceso a contenido basado en la política de <strong class="red">Netflix</strong> Household, la cual vincula las cuentas a un hogar principal mediante verificaciones de ubicación.</p>
         </div>
@@ -39,7 +39,7 @@
         <div class="subtitulo-1">
             <h2>¿Cuál es la vulnerabilidad?</h2>
         </div>
-        <div class="linea-vertical"></div>
+        <div class="linea-vertical" style="height: 190px;"></div>
         <div class="parrafo-1">
             <p> <strong class="red">Netflix</strong> implementa un mecanismo de bloqueo que muestra un mensaje de error ("Tu dispositivo no forma parte del Hogar con Netflix de esta cuenta") mediante elementos HTML (divs) superpuestos en la interfaz. Sin embargo, la validación de acceso se ejecuta únicamente en el lado del cliente (frontend), sin realizar verificaciones constantes con el servidor (backend). Esta implementación permite que usuarios con conocimientos básicos de desarrollo web puedan manipular el DOM mediante herramientas de inspección, eliminando los divs bloqueantes y accediendo al contenido restringido sin autorización.</p>
         </div>
@@ -53,35 +53,47 @@
         <div class="subtitulo-1">
             <h2>¿Cuando se detecto?</h2>
         </div>
-        <div class="linea-vertical"></div>
+        <div class="linea-vertical" style="height: 144px;"></div>
         <div class="parrafo-1">
             <p>Los primeros reportes de esta vulnerabilidad surgieron en 2023, evidenciados por publicaciones en redes sociales y plataformas como TikTok, donde usuarios demostraban el método de elusión. A pesar de su identificación, <strong class="red">Netflix</strong> no ha implementado una solución definitiva hasta la fecha (2025), lo que sugiere un enfoque deliberado que prioriza la experiencia de usuario sobre medidas de seguridad más estrictas.  </p>
         </div>
     </div>
-    <div class="numero" style="margin-bottom: 0; gap: 40px;">
-    <video autoplay muted loop playsinline width="400" height="360">
-    <source src="videos/@theappleforge.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
-    <video style="border-radius: 40px 10px" autoplay muted loop playsinline width="400" height="360">
-    <source src="videos/@user45367891356.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
+    <div class="videos-tiktok-wrapper">
+        <div class="numero" style="margin-bottom: 0; gap: 40px;">
+            <video autoplay muted loop playsinline width="400" height="360">
+                <source src="videos/@theappleforge.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <video style="border-radius: 40px 10px" autoplay muted loop playsinline width="400" height="360">
+                <source src="videos/@user45367891356.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+        <div class="tiktok-links">
+            <div class="tiktok-link">
+                <img src="images/tiktok-logo.svg" alt="">
+                <a target="_blank" href="https://www.tiktok.com/@theappleforge/video/7523216012259413279?is_from_webapp=1&sender_device=pc&web_id=7525997371874166278">
+                    <p style="font-size: 15px;">@theappleforge</p>
+                </a>
+            </div>
+            <div style="width: 190px;"></div>
+            <div class="tiktok-link">
+                <img src="images/tiktok-logo.svg" alt="">
+                <a target="_blank" href="https://www.tiktok.com/@user45367891356/video/7511042391042723094?is_from_webapp=1&sender_device=pc&web_id=7525997371874166278">
+                    <p style="font-size: 15px;">@user45367891356</p>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="numero" style="gap: 0;">
-        <img src="images/tiktok-logo.svg" alt=""><a target="_blank" href="https://www.tiktok.com/@theappleforge/video/7523216012259413279?is_from_webapp=1&sender_device=pc&web_id=7525997371874166278"><p style="font-size: 15px;">@theappleforge</p></a>
-        <div style="width: 280px;"></div>
-        <img src="images/tiktok-logo.svg" alt=""><a target="_blank" href="https://www.tiktok.com/@user45367891356/video/7511042391042723094?is_from_webapp=1&sender_device=pc&web_id=7525997371874166278"><p style="font-size: 15px;">@user45367891356</p></a>
-    </div>
-    <div class="numero">
-        <iframe width="800" height="400" src="https://www.youtube.com/embed/aNOntmPTq8o?si=7hkMGZp_iCyG65RX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="numero" style="padding-left: 0;">
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/aNOntmPTq8o?si=7hkMGZp_iCyG65RX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="numero">
         <svg id="rank-5" width="80px" height="100px" viewBox="0 0 118 154" class="svg-icon svg-icon-rank-5 top-10-rank"><path stroke="#595959" stroke-width="4" d="M105.588 32.174V2H13.534l-8.3 88.357h32.463c2.145-2.362 4.866-4.254 8.143-5.675 3.585-1.554 7.543-2.328 11.859-2.328 6.247 0 11.418 1.745 15.418 5.255 4.061 3.564 6.104 8.37 6.104 14.265 0 6.041-2.044 10.89-6.121 14.387-3.999 3.43-9.162 5.132-15.401 5.132-4.299 0-8.17-.694-11.601-2.095-3.11-1.268-5.577-2.946-7.368-5.042H2.592c3.308 11.593 9.782 20.623 19.46 27.164C32.472 148.464 45.64 152 61.602 152c10.12 0 19.294-1.99 27.548-5.966 8.198-3.949 14.711-9.718 19.572-17.335 4.844-7.59 7.278-16.95 7.278-28.123 0-9.182-2.013-17.314-6.032-24.431-4.02-7.118-9.514-12.7-16.51-16.775-6.99-4.072-14.849-6.109-23.612-6.109-11.06 0-20.099 3.483-27.234 10.461l-3.892 3.806 3.273-35.354h63.595z"></path></svg>
         <div class="subtitulo-1" style="text-align: center; font-size: 20px;">
             <h2>Causas</h2>
         </div>
-        <div class="linea-vertical"></div>
+        <div class="linea-vertical" style="height: 204px;"></div>
         <div class="parrafo-1"">
             <p>El origen de esta vulnerabilidad radica en decisiones técnicas específicas: </p> 
             <p>1. Validación unilateral: Dependencia exclusiva de controles frontend sin respaldo backend.</p>
@@ -89,12 +101,12 @@
             <p>3. Priorización de UX: Elección deliberada de no implementar verificaciones frecuentes que podrían afectar el rendimiento.</p>  
         </div>
     </div>
-    <div class="numero" style="padding-left: 6.2vw;">
+    <div class="numero" style="padding-left: 5.1vw;">
         <svg id="rank-6" width="80px" height="100px" viewBox="0 0 120 154" class="svg-icon svg-icon-rank-6 top-10-rank"><path stroke="#595959" stroke-width="4" d="M79.482 38.192h35.551c-3.284-10.945-8.963-19.573-17.048-25.938C89.323 5.434 77.531 2 62.545 2 50.756 2 40.35 4.86 31.277 10.577c-9.064 5.712-16.198 14.09-21.412 25.178C4.63 46.893 2 60.425 2 76.365c0 14.416 2.356 27.344 7.059 38.798 4.667 11.368 11.573 20.34 20.734 26.956C38.904 148.7 50.225 152 63.816 152a61.513 61.513 0 0019.922-3.278 53.546 53.546 0 0017.378-9.792c5.154-4.33 9.255-9.64 12.314-15.947 3.042-6.273 4.57-13.556 4.57-21.868 0-8.812-2.062-16.636-6.182-23.51-4.134-6.897-9.643-12.293-16.55-16.212-6.905-3.917-14.48-5.874-22.76-5.874-14.546 0-25.34 4.55-32.569 13.63l-4.003 5.03.443-6.413c.874-12.636 3.56-21.85 8.168-27.654 4.69-5.907 10.885-8.9 18.421-8.9 4.26 0 7.826.734 10.685 2.24 2.445 1.287 4.396 2.867 5.829 4.74zM62.605 123c-5.825 0-10.902-1.894-15.136-5.655C43.173 113.528 41 108.603 41 102.71c0-5.881 2.164-10.864 6.44-14.818C51.674 83.975 56.762 82 62.604 82c5.847 0 10.906 1.98 15.074 5.905C81.878 91.859 84 96.837 84 102.71c0 5.885-2.131 10.805-6.35 14.622-4.167 3.77-9.214 5.668-15.045 5.668z"></path></svg>
         <div class="subtitulo-1" style="text-align: center; font-size: 20px;">
             <h2>Solucion</h2>
         </div>
-        <div class="linea-vertical"></div>
+        <div class="linea-vertical" style="height: 313px;"></div>
         <div class="parrafo-1"">
             <p style="text-align: center;">Implementar Validación en Tiempo Real (Backend)</p>
             <p>•    Solución:</p>
@@ -105,13 +117,13 @@
 
         </div>
     </div>
-    <div style="padding: 100px;">
+    <div style="padding: 100px; text-align: center;">
         <button onclick="ShowHide()">Prueba de Netflix Household</button>
     </div>
     <div class="netflix-household">
         <div class="netflix-container">
             <div class="error-modal">
-                <h3>Your device isn’t part of the Netflix<strong>------</strong>household for this account</h3>
+                <h3>Your device isn’t part of the Netflix household for this account</h3>
                 
                 <div class="email-section">
                     <p>Not Ismail.m********@gmail.com? Create an account to enjoy your own Netflix today.</p>

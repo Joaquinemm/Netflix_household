@@ -8,11 +8,6 @@ body {
     font-family: 'Netflix Sans', Arial, sans-serif;
     background-color: #141414;
     color: #fff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 a{
@@ -33,10 +28,32 @@ a{
     font-weight: bold;
     color: #fafefd6d;
 }
+
 .img-wrapper {
     position: relative;
-    display: inline-block;
-    margin-bottom: 40px;
+    display: block;
+    margin: 40px auto;
+    width: fit-content;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    margin: 0;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.titulo {
+    width: min(500px, 80vw);
+    max-width: 90vw;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .overlay {
@@ -45,7 +62,7 @@ a{
     left: 0;
     width: 100%;
     height: 398.317px;
-    background-color: rgba(0, 0, 0, 0.5); /* negro con 50% transparencia */
+    background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 10px;
@@ -53,7 +70,7 @@ a{
     align-items: center;
 
     display: flex;
-    justify-content: center; /* centrado horizontal */
+    justify-content: center;
     align-items: center; 
 }
 
@@ -62,16 +79,13 @@ a{
 }
 
 
-.ejemplo{
+.ejemplo {
+    max-width: 95vw;
     width: 700px;
     height: auto;
     border-radius: 10px;
 }
 
-.titulo{
-    width: 40%;
-    height: auto;
-}
 
 .numero {
     display: flex;       
@@ -81,13 +95,23 @@ a{
     margin-bottom: 40px;
 }
 
+.numero[style*="gap: 40px"] {
+    justify-content: center;
+    padding-left: 0;
+}
+
+.numero iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .netflix-household {
     display: none; 
     position: fixed; 
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, #311817, #26171c);
     justify-content: center;
@@ -194,12 +218,36 @@ strong{
     gap: 15px;
 }
 
+.videos-tiktok-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.tiktok-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 40px;
+}
+
+.tiktok-link {
+    display: flex;
+    flex-direction: row;      /* Cambia de column a row */
+    align-items: center;      /* Centra verticalmente */
+    gap: 8px;                 /* Espacio entre el icono y el nombre */
+}
+
 @media (max-width: 600px) {
-    .buttons {
-        flex-direction: column;
+    .header-section {
+        min-height: 20vh;
+        padding: 1rem 0.5rem;
     }
-    
-    button {
-        width: 100%;
+    .titulo {
+        width: 90vw;
+        max-width: 95vw;
     }
 }
